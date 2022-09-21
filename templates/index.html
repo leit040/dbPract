@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<h1>Customers</h1>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>LastName</th>
+        <th>City</th>
+        <th>State</th>
+    </tr>
+    {% for customer in customers %}
+    <tr>
+        {% for field in customer %}
+        <td>{{ field }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
